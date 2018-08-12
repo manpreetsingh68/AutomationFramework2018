@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Google Suite">
+    <test name="Google tests">
+        <classes>
+            <class name="com.automation.testcases.GoogleFirstTestCase"></class>
+            <class name="com.automation.testcases.GoogleSecondTestCase"></class>
+        </classes>
+    </test>
+</suite>
+       

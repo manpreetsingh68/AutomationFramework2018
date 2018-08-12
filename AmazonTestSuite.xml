@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Amazon Suite" parallel="methods" thread-count="5">
+    <parameter name="product_name" value="iPhone"></parameter>
+
+    <test name="Amazon tests">
+        <classes>
+            <class name="com.automation.testcases.AmazonSecondTestCase"></class>
+        </classes>
+    </test>
+</suite>
+       

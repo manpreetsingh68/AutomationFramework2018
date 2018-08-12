@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Altoro Suite" parallel="methods" thread-count="5">
+    <parameter name="product_name" value="iPhone"></parameter>
+
+    <test name="Altoro tests">
+        <classes>
+            <class name="com.automation.testcases.AltoroFirstTestCase"></class>
+        </classes>
+    </test>
+</suite>
+       
