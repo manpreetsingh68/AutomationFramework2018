@@ -10,7 +10,7 @@ public class DMDAddDealPage extends BasePage {
     public DMDAddDealPage(WebDriver driver) {super(driver);
     }
 
-    WebDriverClient webDriverClient;
+    public WebDriverClient webDriverClient= null;
 
     @FindBy(css= "#Name[name='Name']")
     private WebElement txt_Name;
@@ -130,48 +130,99 @@ public class DMDAddDealPage extends BasePage {
         try{
             webDriverClient.ClearTextType(txt_Name,"Manpreet DMD Automation deal");
         } catch(Exception e){
-            throw new Exception("Could not enter name for Product",e);
+            throw new Exception("Could not enter name for deal",e);
         }
         try{
             webDriverClient.ClearTextType(txt_Description,"Test Description");
         } catch (Exception e){
-            throw new Exception("Could not enter description for Product",e);
+            throw new Exception("Could not enter description for deal",e);
         }
         try {
             webDriverClient.SelectByVisibleText(dropdown_DealType,"National");
         }catch (Exception e){
-            throw new Exception("Could not select Deal type",e);
+            throw new Exception("Could not select Deal type for deal",e);
         }
         try {
             webDriverClient.SelectByVisibleText(dropdown_TimeZone,"(UTC-11:00) Coordinated Universal Time-11");
         } catch (Exception e){
-            throw new Exception("Could not select Time Zone",e);
+            throw new Exception("Could not select Time Zone for deal",e);
         }
         try {
             webDriverClient.SelectByVisibleText(dropdown_DealLikelihood,"88% - Most Likely");
         }catch (Exception e){
-            throw new Exception("Could not select Deal likelihood",e);
+            throw new Exception("Could not select Deal likelihood for deal",e);
         }
         try {
             webDriverClient.SelectByVisibleText(dropdown_DealCalendarType,"Gregorian");
         }catch (Exception e){
-            throw new Exception("Could not select Deal Calendar Type",e);
+            throw new Exception("Could not select Deal Calendar Type for deal",e);
         }
         try {
             webDriverClient.ClearTextType(txt_StartDate,"01/01/2018 12:00:00 AM");
         }catch (Exception e){
-            throw new Exception("Could not enter Start Date",e);
+            throw new Exception("Could not enter Start Date for deal",e);
         }
         try {
             webDriverClient.ClearTextType(txt_EndDate,"12/30/2018 11:59:59 PM");
         }catch (Exception e){
-            throw new Exception("Could not enter End Date",e);
+            throw new Exception("Could not enter End Date for deal",e);
         }
         try {
             webDriverClient.ClearTextType(txt_ProposalDueDate,"12/30/2018 11:59:59 PM");
         }catch (Exception e){
-            throw new Exception("Could not enter Proposal Due Date",e);
+            throw new Exception("Could not enter Proposal Due Date for deal",e);
         }
+        try {
+            webDriverClient.ClearTextType(txt_Advertiser,"Bose");
+        }catch (Exception e){
+            throw new Exception("Could not enter Advertiser for deal",e);
+        }
+        try {
+            webDriverClient.SelectByVisibleText(dropdown_Currency,"Canadian Dollar (CAD)");
+        }catch (Exception e){
+            throw new Exception("Could not select Currency for deal",e);
+        }
+        try {
+            webDriverClient.SelectByVisibleText(dropdown_RevenueType,"Cash");
+        }catch (Exception e){
+            throw new Exception("Could not select Revenue Type for deal",e);
+        }
+        try {
+            webDriverClient.SelectByVisibleText(dropdown_BillingCycle,"Weekly");
+        }catch (Exception e){
+            throw new Exception("Could not select Billing Cycle for deal",e);
+        }
+        try {
+            webDriverClient.Click(chkbox_RequireCashInAdvance);
+        }catch (Exception e){
+            throw new Exception("Could not check box Cash in Advance for deal",e);
+        }
+        try {
+            webDriverClient.SelectByVisibleText(dropdown_BillingRevenue,"CappedActualsWithRollover");
+        }catch (Exception e){
+            throw new Exception("Could not select Billing Revenue for deal");
+        }
+        try {
+            webDriverClient.SelectByVisibleText(dropdown_PaymentTerms,"Net 30");
+        }catch (Exception e){
+            throw new Exception("Could not select Payment Terms for deal");
+        }
+        try {
+            webDriverClient.SelectByVisibleText(dropdown_RevenueSplitsOwner,"Sundara Jeyamanoharan");
+        }catch (Exception e){
+            throw new Exception("Could not select Revenue Splits owner for deal");
+        }
+        try {
+            webDriverClient.SelectByVisibleText(txt_SalesPlanner,"Manpreet Singh");
+        }catch (Exception e){
+            throw new Exception("Could not enter Sales Planner for deal");
+        }
+        try {
+            webDriverClient.Click(btn_Save);
+        }catch (Exception e){
+            throw new Exception("Could not click on Save deal");
+        }
+
     }
 
 }

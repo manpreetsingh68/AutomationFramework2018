@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
-  <test thread-count="5" name="learnAutomation(failed)">
+  <test thread-count="5" name="Selenium Framework Demo 2018(failed)">
     <classes>
-      <class name="com.automation.testcases.AltoroFirstTestCase">
+      <class name="com.automation.testcases.DMDCreateDealTestCase">
         <methods>
-          <include name="saveResult"/>
-          <include name="openAMHomePage"/>
           <include name="beforeMethod"/>
-          <include name="testAccountBalanceFromExcel" invocation-numbers="4 3 0 2 1"/>
-          <include name="collectReport"/>
+          <include name="DMDAddDealTest"/>
+          <include name="openDMDHomePage"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.automation.testcases.AltoroFirstTestCase -->
+      </class> <!-- com.automation.testcases.DMDCreateDealTestCase -->
     </classes>
-  </test> <!-- learnAutomation(failed) -->
+  </test> <!-- Selenium Framework Demo 2018(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

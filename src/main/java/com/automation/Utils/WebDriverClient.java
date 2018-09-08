@@ -14,4 +14,8 @@ public class WebDriverClient {
         element.sendKeys(text);
     }
 
+    public void Click(WebElement element){
+        element.click();
+    }
+
 }
